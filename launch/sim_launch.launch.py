@@ -17,7 +17,7 @@ def generate_launch_description():
 
     rsp= IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join
                         (get_package_share_directory(pkg),'launch','rsp.launch.py')]),
-                        launch_arguments={'use_sim_time':'true', 'use_ros2_control':'true'}.items())
+                        launch_arguments={'use_sim_time':'true', 'use_ros2_control':'false'}.items())
 
     twist_param = os.path.join(get_package_share_directory(pkg),'config','twist_params.yaml')
     twist_mux = Node(

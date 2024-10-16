@@ -174,7 +174,7 @@
 
 
 
-  <link name="laser_frame">
+  <link name="lidar">
     <inertial>
       <origin xyz="-0.002361 -1.4968E-05 0.019299" rpy="0 0 0" />
       <mass value="0.16538" />
@@ -212,7 +212,7 @@
   <gazebo reference="lidar">
         <material>Gazebo/Black</material>
 
-        <sensor name="laser_frame" type="ray">
+        <sensor name="laser" type="ray">
             <pose> 0 0 0 0 0 0 </pose>
             <visualize>true</visualize>
             <update_rate>10</update_rate>
@@ -234,7 +234,7 @@
                     <argument>~/out:=scan</argument>
                 </ros>
                 <output_type>sensor_msgs/LaserScan</output_type>
-                <frame_name>laser_frame</frame_name>
+                <frame_name>lidar</frame_name>
             </plugin>
         </sensor>
     </gazebo>
